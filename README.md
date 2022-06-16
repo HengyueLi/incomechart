@@ -46,13 +46,7 @@ paydate |	12MonthAverage(银行实发) |	银行实发 |	税前 |
 同理，黄色的字段不要改，绿色的字段是跟`SheetFormatSetting`中对应的，数据从原始工资单里面提取后自动填写到这里。看到右边有几个按钮。
 - `autoFill`: 这个是最重要的，自动填写数据。数据填写之后才能用其他功能。以下其他的按钮都是其他的统计功能，之后都会再做调整。
 - `mean12`: 计算一个12个月量的平均值我觉得是挺重要的，数据会填入第二列(你点一下试试)
-- `Plot`：可视化的统计。这个还是测试功能，需要安装`matplotlib`。目前只在Windows上安装成功了，Mac 和Ubuntu上安装不正确报错。出错的原因大约是`numpy`安装的路径有些问题。Windows版的LibreOffice自带一个python，可以安装独立的py库。Linux上用自带的Python，导致路径乱七八糟。不过应该可以解决，以后再想办法。如果你用的Windows且想用这个功能，参考下面的方法安装`matplotlib`。如果运行成功，结果会保存到桌面。
+- `Plot`：可视化的统计，在表中插入一张统计图。
 
 ### 4. 开发测试`debug`
-测试用的。对你没啥用，可删掉。
-
-## Windows 安装`matplotlib`
-1. 找到LibreOffice的安装目录下的`program`,我电脑上的路径是`C:\Program Files\LibreOffice\program`。以下都在该目录下操作
-2. 将网页[get-pip](https://bootstrap.pypa.io/get-pip.py)上的内容复制粘贴保存到该目录下文件`get-pip.py`.
-3. 打开cmd，cd 到`program`目录下。跑`python.exe get-pip.py`，等待pip安装完成。
-4. 继续跑`python.exe -m pip install matplotlib`，等待matplotlib安装完成。
+测试和工作目录。对你没啥用，但是**不能删掉**。
